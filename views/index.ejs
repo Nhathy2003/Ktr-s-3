@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kiểm Tra đề 3</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Custommer3</h1>
+    <a href="form-add"><button> add </button></a><br><br>
+  <table border="1">
+    <tr>
+      <th>id</th>
+      <th>EnableFCM</th>
+      <th>Avatar</th>
+      <th>Banner</th>
+      <th>IsGetNotification</th>
+      <th>IsVerified</th>
+      <th>IsGetOpen</th>
+    </tr>
+  <!-- ejseach -->
+  <% lops.forEach(item => { %>
+    <!-- <tr>
+       <td>  ejsout  </td>
+      </tr> -->
+  <tr>
+    <td><%= item._id %> </td>
+    <td><%= item.EnableFCM %> </td>
+    <td><%= item.Avatar %> </td>
+    <td><%= item.Banner %> </td>
+    <td><%= item.IsGetNotification %> </td>
+    <td><%= item.IsVerified %> </td>
+    <td><%= item.IsGetOpen %> </td>
+    <td><a href="/form-update/<%= item._id %>">Update</a>||<a href="/form-delete/<%= item._id %>">Delete</a></td>
+  </tr>
+    <% }) %>
+
+  </tr>
+ 
+ 
+  </table>
+
+  </body>
+</html>
